@@ -1,24 +1,34 @@
-import logo from './assets/images/logo.svg';
+// import logo from './assets/images/logo.svg';
 import './assets/css/App.css';
-import MiComponente from "./components/MiComponente";
+//componentes
+// import MiComponente from "./components/MiComponente";
+import Peliculas from "./components/Peliculas";
+import Header from "./components/Header";
+import Slider from "./components/Slider";
+import Sidebar from "./components/Sidebar";
+import Footer from "./components/Footer";
+import SeccionPruebas from "./components/SeccionPruebas";
 
 function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
+    var buttonString = "Ver menos";
 
-      </header>
-      <section className="componentes">
-        <MiComponente/>
+    return (
+        <div className="App">
+            <Header/>
+            <Slider
+                title="Bienvenido al Curso de React"
+                btn = {buttonString}
+            />
+            <div className="center">
 
+                <Peliculas/>
 
-      </section>
-    </div>
-  );
+                <Sidebar/>
+            </div>
+            <div className="clearfix"></div>
+            <Footer/>
+        </div>
+    );
 }
 
 export default App;
